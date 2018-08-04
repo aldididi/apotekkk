@@ -1,0 +1,152 @@
+body {
+	margin: 80;
+	background-color: #e8e8e8;
+	font-family: 'Oxygen', sans-serif;
+
+}
+
+.container {
+	width: 80%;
+	margin: 0 aut0;
+}
+
+header {
+	background : #fff;
+	padding-bottom: 20;
+}
+
+header :: after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;	
+	padding: 10px 0;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 10px;
+	padding-top: 25px;
+	position: relative;
+}
+
+nav a {
+	color: #ff2e4c;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: #2e99b0;
+}
+
+nav a::before{
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100px;
+	background-color: #ff2e4c;
+
+	position: absolute;
+	top: 0;
+	width: 0%;
+
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
+
+/*slideshow container banner*/
+
+.slideshoww-container{
+	max-width:80%;
+	position: relative;
+	margin: auto;
+	padding-top: 50%;
+}
+
+/*button next*/
+/*.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%
+	width: auto;
+	margin-top: -22px;
+	padding: 16%;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6 ease;
+	border-radius: 0 3px 3px 0
+}*/
+
+/*posisi next button*/
+
+.next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/*hover*/
+.prev:hover, .next:hover{
+background-color: rgba(0,0,0,0,8);
+}
+
+/*caption*/
+.text{
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+}
+
+/*bullets*/
+.dot{
+	cursor: pointer;
+	height: 12px;
+	width: 12px;
+	margin: 0 2px;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 3.6s ease;
+}
+
+.active, .dot, .hover {
+	background-color: #717171;
+}
+
+/*animasi fade*/
+
+.fade {
+	-webkit-animation-name:fade;
+	-webkit-animation-duration:2.5s;
+	animation-name: fade;
+	animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
